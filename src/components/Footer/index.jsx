@@ -4,7 +4,7 @@ import './style.scss'
 
 const Footer = () => {
   return (
-    <section className={'footer'}>
+    <section className={'footer'} data-scroll-section>
       <SectionHeader title={'Made in'} />
 
       <h1 id={'location-text'} className={'location'}>

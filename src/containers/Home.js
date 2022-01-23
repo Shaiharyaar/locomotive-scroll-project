@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { About, Featured, Footer, Gallery, Header, Navbar } from '../components'
 import CustomCursor from '../CustomCursor'
+import useLocoScroll from '../hooks/useLocoScroll'
 import '../styles/home.scss'
 const Home = () => {
   const [preLoader, setPreLoader] = useState(true)
@@ -18,6 +19,8 @@ const Home = () => {
     }, 1000)
   }, [])
 
+  useLocoScroll(!preLoader)
+
   useEffect(() => {
     if (timer === 0) {
       clear()
@@ -33,7 +36,7 @@ const Home = () => {
           <h6>Loading Page...</h6>
         </div>
       ) : (
-        <div id={'main-container-id'} className={'main-container'}>
+        <div id={'main-container-id'} className={'main-container'} data-scroll-container>
           <Navbar />
           <Header />
           <Featured />
