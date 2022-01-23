@@ -45,7 +45,7 @@ function GalleryItem({ src, category, subtitle, title, updateActiveImage, index 
   )
 }
 
-const Gallery = ({ src, index, columnOffset }) => {
+const Gallery = ({ src }) => {
   const [activeImage, setActiveImage] = useState(1)
 
   return (
@@ -57,7 +57,7 @@ const Gallery = ({ src, index, columnOffset }) => {
           <span>{images.length}</span>
         </div>
         {images.map((image, index) => (
-          <GalleryItem key={src} index={index} {...image} />
+          <GalleryItem key={index} index={index} {...image} />
         ))}
       </div>
     </section>

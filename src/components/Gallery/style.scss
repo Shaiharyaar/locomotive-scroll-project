@@ -1,7 +1,12 @@
 .gallery-wrap {
+  width: 100vw;
+  overflow-y: scroll;
   background-color: #d53f41;
   margin-left: -5vw;
   margin-right: -5vw;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .gallery-counter {
@@ -32,10 +37,11 @@
 
 .gallery {
   height: 80vh;
-
+  position: relative;
   padding: 10vh 0;
   width: 400%;
   display: flex;
+  flex-wrap: nowrap;
 
   .gallery-item {
     width: 100%;
