@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  padding-bottom: 200px;
+  .location {
+    font-size: 13vw;
+    text-transform: uppercase;
+    font-family: 'Bodoni Moda', serif;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    opacity: 1;
+    &.is-reveal {
+      opacity: 1;
+    }
+  }
+}
