@@ -27,9 +27,6 @@
     margin-block-end: 0;
   }
 }
-.lineParent {
-  overflow: hidden;
-  .lineChildren {
-    transform: translate(0, 500px);
-  }
+.lineChildren {
+  transform: translate(0, 500px);
 }
